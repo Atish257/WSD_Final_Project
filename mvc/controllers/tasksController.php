@@ -69,10 +69,8 @@ class tasksController extends http\controller
     }
 
     public static function save() {
-        $user = accounts::findOne($_REQUEST['id']);
-
-        $user->id = $_POST['id'];
-        $user->ownername = $_POST['ownername'];
+        $user = todos::findOne($_REQUEST['id']);
+        $user->owneremail = $_POST['owneremail'];
         $user->ownerid = $_POST['ownerid'];
         $user->createddate = $_POST['createddate'];
         $user->duedate = $_POST['duedate'];
