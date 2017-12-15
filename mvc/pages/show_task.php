@@ -28,7 +28,7 @@ print utility\htmlTable::generateTableFromOneRecord($data);
     }
 </style>
 <form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
-    
+
     Owneremail: <tab><input type="email" name="owneremail" value="<?php echo $data->owneremail; ?>"></tab><br><br>
     Ownerid:    <tab><input type="number" name="ownerid" value="<?php echo $data->ownerid; ?>"></tab><br><br>
     Createdate: <tab><input type="text" name="createddate" value="<?php echo $data->createddate; ?>"></tab><br><br>
