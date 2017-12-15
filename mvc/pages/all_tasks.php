@@ -25,6 +25,24 @@ print utility\htmlTable::genarateTableFromMultiArray($data);
 
 ?>
 
+<br>
+<br>
+<style>
+    tab{
+        float: right;
+        margin-right: 63.0em;
+    }
+</style>
+<form action="index.php?page=tasks&action=insert" method="post">
+
+    Owneremail: <tab><input type="email" name="owneremail"></tab><br><br>
+    Ownerid:    <tab><input type="number" name="ownerid"></tab><br><br>
+    Createdate: <tab><input type="text" name="createddate"></tab><br><br>
+    Duedate:    <tab><input type="text" name="duedate"></tab><br><br>
+    Message:    <tab><input type="text" name="message"></tab><br><br>
+    Isdone:     <tab><input type="text" name="isdone"></tab><br><br>
+    <input type="submit" value="Insert Task">
+</form>
 
 <script src="js/scripts.js"></script>
 </body>
