@@ -17,15 +17,20 @@
 
 <body>
 
-
+<style>
+    tab{
+        float: right;
+        margin-right: 63.0em;
+    }
+</style>
 <form action="index.php?page=accounts&action=register" method="post">
-    <em><b>First name:</b></em> <input type="text" name="fname"><br><br>
-    <em><b>Last name:</b></em> <input type="text" name="lname"><br><br>
-    <em><b>Email:</b></em> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="email"><br><br>
-    <em><b>Phone:</b></em> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="phone"><br><br>
-    <em><b>Birthday:</b></em> &nbsp&nbsp&nbsp&nbsp<input type="text" name="birthday"><br><br>
-    <em><b>Gender:</b></em> &nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="gender"><br><br>
-    <em><b>Password:</b></em> &nbsp&nbsp&nbsp<input type="password" name="password"><br><br>
+    <em><b>First name:</b></em> <tab><input type="text" name="fname"></tab><br><br>
+    <em><b>Last name:</b></em>  <tab><input type="text" name="lname"></tab><br><br>
+    <em><b>Email:</b></em>      <tab><input type="text" name="email"></tab><br><br>
+    <em><b>Phone:</b></em>      <tab><input type="text" name="phone"></tab><br><br>
+    <em><b>Birthday:</b></em>   <tab><input type="text" name="birthday"></tab><br><br>
+    <em><b>Gender:</b></em>     <tab><input type="text" name="gender"></tab><br><br>
+    <em><b>Password:</b></em>   <tab><input type="password" name="password"></tab><br><br>
     <input type="submit" value="Submit form">
 </form>
 
