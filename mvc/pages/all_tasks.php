@@ -20,7 +20,8 @@
 <?php
 //this is how you print something
 
-print utility\htmlTable::genarateTableFromMultiArray($data);
+//print($data);
+print_r(utility\htmlTable::genarateTableFromMultiArray($data));
 
 
 ?>
