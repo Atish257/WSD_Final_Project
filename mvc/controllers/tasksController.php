@@ -109,7 +109,7 @@ class tasksController extends http\controller
     public static function getTodo()
     {
         session_start();
-        $_SESSION["userID"];
+        $id = $_SESSION["userID"];
         $x = todos::findTodo($id);
         self::getTemplate('all_tasks',$x);
     }
