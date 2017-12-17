@@ -61,6 +61,7 @@ class processRequest
                 break;
             }
         }
+
         if (is_null($foundRoute)) {
             controller::getTemplate('notfound');
             exit;

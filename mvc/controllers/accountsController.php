@@ -131,7 +131,7 @@ class accountsController extends http\controller
 
                 session_start();
                 $_SESSION["userID"] = $user->id;
-
+                header("Location: index.php?page=tasks&action=getTodo");
                 //forward the user to the show all todos page
                 print_r($_SESSION);
             } else {

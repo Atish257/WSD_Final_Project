@@ -33,7 +33,7 @@ print utility\htmlTable::genarateTableFromMultiArray($data);
         margin-right: 63.0em;
     }
 </style>
-<form action="index.php?page=tasks&action=insert" method="post">
+<form action="index.php?page=tasks&action=insertTodo" method="post">
 
     Owneremail: <tab><input type="email" name="owneremail"></tab><br><br>
     Ownerid:    <tab><input type="number" name="ownerid"></tab><br><br>

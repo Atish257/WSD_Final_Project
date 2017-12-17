@@ -76,7 +76,22 @@ class tasksController extends http\controller
         $user->duedate = $_POST['duedate'];
         $user->message = $_POST['message'];
         $user->isdone = $_POST['isdone'];
+        $user->userid = $_SESSION['userid'];
         $user->save();
+        header("Location: index.php?page=tasks&action=all");
+
+    }
+
+    public static function insertTodo(){
+        $user = new todo();
+        $user->owneremail = $_POST['owneremail'];
+        $user->ownerid = $_POST['ownerid'];
+        $user->createddate = $_POST['createddate'];
+        $user->duedate = $_POST['duedate'];
+        $user->message = $_POST['message'];
+        $user->isdone = $_POST['isdone'];
+        $user->save();
+        //echo 'Success';
         header("Location: index.php?page=tasks&action=all");
 
     }
@@ -87,8 +102,16 @@ class tasksController extends http\controller
     {
         $record = todos::findOne($_REQUEST['id']);
         $record->delete();
-        print("One Recorded deleted sucessfully");
+        print_r("One Recorded deleted sucessfully");
 
+    }
+
+    public static function getTodo()
+    {
+        session_start();
+        $_SESSION["userID"];
+        $x = todos::findTodo($id);
+        self::getTemplate('all_tasks',$x);
     }
 
 }

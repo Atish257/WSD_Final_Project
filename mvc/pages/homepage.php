@@ -19,31 +19,34 @@
 
 
 <h1>
-    <?php
-
-    //this how to print some data;
-    echo $data['site_name'];
+    <?php echo $data['site_name'];
 
     ?> </h1>
 
 <h1><a href="index.php?page=accounts&action=all">Show All Accounts</a></h1>
 <h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>
 
+<style>
+    space{
+           float: right;
+           margin-right: 65em;
+         }
+</style>
 <form action="index.php?page=accounts&action=login" method="POST">
 
     <div class="container">
-        <label><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="email" required>
+        <label><b>Email ID:</b></label>
+        <space><input type="text" placeholder="Enter Username" name="email" required></space><br><br>
 
-        <label><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
+        <label><b>Password:</b></label>
+        <space><input type="password" placeholder="Enter Password" name="password" required></space><br><br>
 
-        <button type="submit">Login</button>
+        <button type="submit"><b>Login</b></button>
     </div>
 
 
 </form>
-<h1><a href="index.php?page=accounts&action=register">Register</a></h1>
+<h1><a href="index.php?page=accounts&action=register">REGISTER</a></h1>
 
 
 <script src="js/scripts.js"></script>
