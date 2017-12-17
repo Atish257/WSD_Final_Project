@@ -19,11 +19,9 @@
 
 <?php
 //this is how you print something
-
 //print($data);
+include "header.php";
 print_r(utility\htmlTable::genarateTableFromMultiArray($data));
-
-
 ?>
 
 <br>

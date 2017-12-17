@@ -41,7 +41,7 @@
         <label><b>Password:</b></label>
         <space><input type="password" placeholder="Enter Password" name="password" required></space><br><br>
 
-        <button type="submit"><b>Login</b></button>
+        <button type="submit"><b>LOGIN</b></button>
     </div>
 
 
