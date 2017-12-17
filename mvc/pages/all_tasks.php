@@ -19,9 +19,6 @@
 
 <?php include "header.php"; ?>
 
-<!--<form action="index.php?page=accounts&action=myprofile" id="myprofile" form="myrofile">
-    <button type="submit" value="profile" form="myprofile">MY PROFILE</button>
-</form>-->
 
 <a href="index.php?page=accounts&action=myprofile">MY PROFILE</a>
 <a href="index.php?page=accounts&action=myprofile">EDIT PROFILE</a>
@@ -30,9 +27,8 @@
 <?php /*print_r(utility\htmlTable::genarateTableFromMultiArray($data)); */?>
 
 <?php
-//this is how you print something
 if($data == false){
-    echo '<h3>YOU DID NOT CREATE ANY TASK</h3>';
+    echo '<h3 style="font-family:Georgia">YOU DID NOT CREATE ANY TASK</h3>';
 }else {
     print utility\htmlTable::genarateTableFromMultiArray($data);
 }
