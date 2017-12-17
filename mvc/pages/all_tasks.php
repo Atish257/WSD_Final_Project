@@ -24,6 +24,7 @@
 </form>-->
 
 <a href="index.php?page=accounts&action=myprofile">MY PROFILE</a>
+<a href="index.php?page=accounts&action=myprofile">EDIT PROFILE</a>
 
 
 <?php print_r(utility\htmlTable::genarateTableFromMultiArray($data)); ?>
