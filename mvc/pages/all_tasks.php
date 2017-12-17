@@ -17,12 +17,16 @@
 
 <body>
 
-<?php
-//this is how you print something
-//print($data);
-include "header.php";
-print_r(utility\htmlTable::genarateTableFromMultiArray($data));
-?>
+<?php include "header.php"; ?>
+
+<!--<form action="index.php?page=accounts&action=myprofile" id="myprofile" form="myrofile">
+    <button type="submit" value="profile" form="myprofile">MY PROFILE</button>
+</form>-->
+
+<a href="index.php?page=accounts&action=myprofile">MY PROFILE</a>
+
+
+<?php print_r(utility\htmlTable::genarateTableFromMultiArray($data)); ?>
 
 <br>
 <br>

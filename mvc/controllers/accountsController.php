@@ -112,8 +112,6 @@ class accountsController extends http\controller
     public static function login()
     {
         $user = accounts::findUserbyEmail($_REQUEST['email']);
-
-
         if ($user == FALSE) {
             echo 'user not found';
         } else {
@@ -132,10 +130,6 @@ class accountsController extends http\controller
             }
 
         }
-
-
-
-
     }
 
     public static function logout()
@@ -145,4 +139,17 @@ class accountsController extends http\controller
         header("Location: index.php?page=homepage&action=show");
         exit();
     }
+
+    public static function myprofile()
+    {
+        if (session_status() == PHP_SESSION_NONE)
+        {
+            session_start();
+        }
+        $record = accounts::findOne($_SESSION['userID']);
+        self::getTemplate('show_account', $record);
+
+    }
+
+   
 }

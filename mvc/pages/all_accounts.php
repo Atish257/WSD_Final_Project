@@ -22,7 +22,7 @@
 
 <?php
 //this is how you print something
-
+include("header.php");
 print utility\htmlTable::genarateTableFromMultiArray($data);
 
 
