@@ -14,38 +14,59 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
 </head>
+<style>
+    h1{
+        font-family:georgia;
+        text-align:center;
+        padding: 20px;
+    }
+    #cdiv{
+        background-color: lightgrey;
+        border: 20px solid greenyellow;
+        border-style:ridge;
+        width: 450px;
+        font-family:georgia;
+        padding: 40px 40px 40px 40px
+    }
+    space{
+        float: right;
+        margin-right: 45em;
+    }
+    button{
+        font-family:georgia;
+        margin-left: 8em;
+    }
+    strong
+    {
+        margin: 10px;
+    }
 
+</style>
 <body>
 
 
-<h1 style="font-family:georgia">
+<h1>
     <?php echo $data['site_name']; ?>
-</h1>
-
+</h1><br>
+<hr>
 <!--<h1><a href="index.php?page=accounts&action=all">Show All Accounts</a></h1>-->
 <!--<h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>-->
-<br><br>
-<style>
-    space{
-           float: right;
-           margin-right: 50em;
-         }
-</style>
+<br>
 <form action="index.php?page=accounts&action=login" method="POST">
 
-    <div class="container" style="font-family:georgia;border-style:outset;padding: 50px 15px 50px 50px">
+    <div class="container" id="cdiv">
         <label><b>Email ID:&nbsp&nbsp</b></label>
         <input type="text" placeholder="Enter Username" name="email" required><br><br>
 
         <label><b>Password:</b></label>
         <input type="password" placeholder="Enter Password" name="password" required><br><br>
 
-        <button type="submit" style="font-family:georgia;float:right"><b>LOGIN</b></button>
+        <button type="submit" style=""><strong>LOGIN</strong></button>
     </div>
 
-<hr>
 </form>
-<h1><a href="index.php?page=accounts&action=register">REGISTER</a></h1>
+<br><hr>
+<h1 style="text-align: center"><a href="index.php?page=accounts&action=register">REGISTER</a></h1>
 
 
 <script src="js/scripts.js"></script>
