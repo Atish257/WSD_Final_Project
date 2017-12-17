@@ -27,7 +27,18 @@
 <a href="index.php?page=accounts&action=myprofile">EDIT PROFILE</a>
 
 
-<?php print_r(utility\htmlTable::genarateTableFromMultiArray($data)); ?>
+<?php /*print_r(utility\htmlTable::genarateTableFromMultiArray($data)); */?>
+
+<?php
+//this is how you print something
+if($data == false){
+    echo '<h3>YOU DID NOT CREATE ANY TASK</h3>';
+}else {
+    print utility\htmlTable::genarateTableFromMultiArray($data);
+}
+
+?>
+
 
 <br>
 <br>
