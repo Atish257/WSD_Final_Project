@@ -9,6 +9,7 @@
     <meta name="author" content="SitePoint">
 
     <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -20,7 +21,7 @@
 <style>
     tab{
         float: right;
-        margin-right: 63.0em;
+        margin-right: 1.0em;
     }
 
     #stdiv{
@@ -44,12 +45,12 @@ print utility\htmlTable::generateTableFromOneRecord($data);
 <div id="stdiv">
 <form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
 
-    Owneremail: <tab><input type="email" name="owneremail" value="<?php echo $data->owneremail; ?>"></tab><br><br>
-    Ownerid:    <tab><input type="number" name="ownerid" value="<?php echo $data->ownerid; ?>"></tab><br><br>
-    Createdate: <tab><input type="text" name="createddate" value="<?php echo $data->createddate; ?>"></tab><br><br>
-    Duedate:    <tab><input type="text" name="duedate" value="<?php echo $data->duedate; ?>"></tab><br><br>
-    Message:    <tab><input type="text" name="message" value="<?php echo $data->message; ?>"></tab><br><br>
-    Isdone:     <tab><input type="text" name="isdone" value="<?php echo $data->isdone; ?>"></tab><br><br>
+    <b>Owneremail</b>: <tab><input type="email" name="owneremail" value="<?php echo $data->owneremail; ?>"></tab><br><br>
+    <b>Ownerid:</b>    <tab><input type="number" name="ownerid" value="<?php echo $data->ownerid; ?>"></tab><br><br>
+    <b>Createdate:</b> <tab><input type="text" name="createddate" value="<?php echo $data->createddate; ?>"></tab><br><br>
+    <b>Duedate:</b>    <tab><input type="text" name="duedate" value="<?php echo $data->duedate; ?>"></tab><br><br>
+    <b>Message:</b>    <tab><input type="text" name="message" value="<?php echo $data->message; ?>"></tab><br><br>
+    <b>Isdone:</b>     <tab><input type="text" name="isdone" value="<?php echo $data->isdone; ?>"></tab><br><br>
     <input type="submit" value="Submit form">
 </form>
 

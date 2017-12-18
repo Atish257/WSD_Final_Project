@@ -90,6 +90,7 @@ class accountsController extends http\controller
     public static function save() {
         $user = accounts::findOne($_REQUEST['id']);
 
+
         $user->email = $_POST['email'];
         $user->fname = $_POST['fname'];
         $user->lname = $_POST['lname'];
@@ -97,15 +98,15 @@ class accountsController extends http\controller
         $user->birthday = $_POST['birthday'];
         $user->gender = $_POST['gender'];
         $user->save();
-        header("Location: index.php?page=accounts&action=all");
-
+        //header("Location: index.php?page=accounts&action=all");
+        self::getTemplate('show_account',$user);
     }
 
     public static function delete() {
 
         $record = accounts::findOne($_REQUEST['id']);
         $record->delete();
-        header("Location: index.php?page=accounts&action=all");
+        header("Location: index.php");
     }
 
     //this is to login, here is where you find the account and allow login or deny.

@@ -69,6 +69,10 @@ class tasksController extends http\controller
     }
 
     public static function save() {
+
+        if(session_status()== PHP_SESSION_NONE) {
+            session_start();
+        }
         $user = todos::findOne($_REQUEST['id']);
         $user->owneremail = $_POST['owneremail'];
         $user->ownerid = $_POST['ownerid'];
@@ -76,24 +80,30 @@ class tasksController extends http\controller
         $user->duedate = $_POST['duedate'];
         $user->message = $_POST['message'];
         $user->isdone = $_POST['isdone'];
-        $user->userid = $_SESSION['userid'];
+        $user->userid = $_SESSION['userID'];
         $user->save();
-        header("Location: index.php?page=tasks&action=all");
+        //header("Location: index.php?page=tasks&action=all");
+        self::getTodo();
 
     }
 
     public static function insertTodo(){
         $user = new todo();
+        if(session_status()==PHP_SESSION_NONE){
+            session_start();
+        }
         $user->owneremail = $_POST['owneremail'];
         $user->ownerid = $_POST['ownerid'];
         $user->createddate = $_POST['createddate'];
         $user->duedate = $_POST['duedate'];
         $user->message = $_POST['message'];
         $user->isdone = $_POST['isdone'];
+        $user->userid = $_SESSION['userID'];
+
         $user->save();
         //echo 'Success';
-        header("Location: index.php?page=tasks&action=all");
-
+        //header("Location: index.php?page=tasks&action=all");
+        self::getTodo();
     }
 
     //this is the delete function.  You actually return the edit form and then there should be 2 forms on that.
@@ -102,13 +112,15 @@ class tasksController extends http\controller
     {
         $record = todos::findOne($_REQUEST['id']);
         $record->delete();
-        print_r("One Recorded deleted sucessfully");
-
+        //print_r("One Recorded deleted sucessfully");
+        self::getTodo();
     }
 
     public static function getTodo()
     {
-        session_start();
+        if(session_status()== PHP_SESSION_NONE) {
+            session_start();
+        }
         $id = $_SESSION["userID"];
         $x = todos::findTodo($id);
         self::getTemplate('all_tasks',$x);
