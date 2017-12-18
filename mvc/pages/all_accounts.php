@@ -15,7 +15,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body background = "paper.jpg">
 <h1>All Accounts</h1>
 
 <h1> HI</h1>

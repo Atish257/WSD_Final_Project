@@ -43,17 +43,17 @@
 
 </style>
 
-<body>
+<body background = "paper.jpg">
 
 
 <h2><strong>REGISTRATION</strong></h2>
 <div id="rdiv">
 <form action="index.php?page=accounts&action=register" method="post">
-    <b>First name:</b> <tab><input type="text" name="fname"></tab><br><br>
-    <b>Last name:</b>  <tab><input type="text" name="lname"></tab><br><br>
-    <b>Email:</b>      <tab><input type="text" name="email" required></tab><br><br>
-    <b>Phone:</b>      <tab><input type="text" name="phone" maxlength="10"></tab><br><br>
-    <b>Birthday:</b>   <tab><input type="text" name="birthday"></tab><br><br>
+    <b>First name:</b> <tab><input type="text" name="fname" required></tab><br><br>
+    <b>Last name:</b>  <tab><input type="text" name="lname" required></tab><br><br>
+    <b>Email:</b>      <tab><input type="email" name="email" required></tab><br><br>
+    <b>Phone:</b>      <tab><input type="text" name="phone" maxlength="10" required></tab><br><br>
+    <b>Birthday:</b>   <tab><input type="text" name="birthday" ></tab><br><br>
     <b>Gender:</b>     <tab><!--<input type="text" name="gender">-->
                                 <select>
                                     <option value=""></option>

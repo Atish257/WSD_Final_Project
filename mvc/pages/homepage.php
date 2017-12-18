@@ -42,8 +42,7 @@
     }
 
 </style>
-<body>
-
+<body background = "paper.jpg">
 
 <h1>
     <?php echo $data['site_name']; ?>
@@ -56,7 +55,7 @@
 
     <div class="container" id="hdiv">
         <label><b>Email ID:&nbsp&nbsp</b></label>
-        <input type="text" placeholder="Enter Username" name="email" required><br><br>
+        <input type="email" placeholder="Enter Username" name="email" required><br><br>
 
         <label><b>Password:</b></label>
         <input type="password" placeholder="Enter Password" name="password" required><br><br>

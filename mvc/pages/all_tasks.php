@@ -15,7 +15,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body background = "paper.jpg">
 
 <?php include "header.php"; ?>
 

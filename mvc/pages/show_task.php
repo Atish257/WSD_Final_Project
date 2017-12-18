@@ -15,18 +15,33 @@
     <![endif]-->
 </head>
 
-<body>
+<body background = "paper.jpg">
 
-<?php
-//this is how you print something  $data contains the record that was selected on the table.
-print utility\htmlTable::generateTableFromOneRecord($data);
-?>
 <style>
     tab{
         float: right;
         margin-right: 63.0em;
     }
+
+    #stdiv{
+        margin-top: 4em;
+        margin-left: 21.5em;
+        font-size:17px;
+        background-color: lightgrey;
+        border: 15px solid greenyellow;
+        border-style:outset;
+        width: 500px;
+        font-family:georgia;
+        padding: 40px 50px 50px 50px;
+    }
+
 </style>
+
+<?php
+//this is how you print something  $data contains the record that was selected on the table.
+print utility\htmlTable::generateTableFromOneRecord($data);
+?>
+<div id="stdiv">
 <form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
 
     Owneremail: <tab><input type="email" name="owneremail" value="<?php echo $data->owneremail; ?>"></tab><br><br>
@@ -41,7 +56,7 @@ print utility\htmlTable::generateTableFromOneRecord($data);
 <form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete">Delete</button>
 </form>
-
+</div>
 
 
 
