@@ -62,12 +62,12 @@ if(!empty($data)) {
 <div id="atdiv">
 <form action="index.php?page=tasks&action=insertTodo" method="post">
 
-    <b>Owneremail:</b> <tab><input type="email" name="owneremail"></tab><br><br>
-    <b>Ownerid:</b>    <tab><input type="number" name="ownerid"></tab><br><br>
-    <b>Createdate:</b> <tab><input type="text" name="createddate"></tab><br><br>
-    <b>Duedate:</b>    <tab><input type="text" name="duedate"></tab><br><br>
-    <b>Message:</b>    <tab><input type="text" name="message"></tab><br><br>
-    <b>Isdone:</b>     <tab><input type="text" name="isdone"></tab><br><br>
+    <b>Owneremail:</b> <tab><input type="email" name="owneremail" required></tab><br><br>
+    <b>Ownerid:</b>    <tab><input type="number" name="ownerid" required></tab><br><br>
+    <b>Createdate:</b> <tab><input type="text" name="createddate" required></tab><br><br>
+    <b>Duedate:</b>    <tab><input type="text" name="duedate"required></tab><br><br>
+    <b>Message:</b>    <tab><input type="text" name="message" required></tab><br><br>
+    <b>Isdone:</b>     <tab><input type="text" name="isdone" required></tab><br><br>
     <input type="submit" value="Insert Task">
 </form>
 </div>
