@@ -20,7 +20,7 @@
         text-align:center;
         padding: 20px;
     }
-    #cdiv{
+    #hdiv{
         background-color: lightgrey;
         border: 20px solid greenyellow;
         border-style:ridge;
@@ -54,7 +54,7 @@
 <br>
 <form action="index.php?page=accounts&action=login" method="POST">
 
-    <div class="container" id="cdiv">
+    <div class="container" id="hdiv">
         <label><b>Email ID:&nbsp&nbsp</b></label>
         <input type="text" placeholder="Enter Username" name="email" required><br><br>
 
